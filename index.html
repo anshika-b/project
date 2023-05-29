@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="left">
+                <li class="nav st"><a href="#">Home</a></li>
+                <li class="nav nd"><a href="#">About</a></li>
+                <li class="nav rd"><a href="#">Services</a></li>
+                <li class="nav th"><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                    <button class="btn search-btn" type="button" id="srh">Search</button>
+                </div>
+            </ul>
+            <ul class="navleft">
+                <li><a href="#" class="cart login">Login/Register</a></li>
+                <button type="button" class="btn btn-secondary" id="popcart" data-container="body" data-toggle="popover"
+                    data-placement="bottom" data-html="true" data-content="hii everyone">
+                    My Cart(<span id="cart">0</span>)
+                </button>
+                <!-- <li><a href="#" class="cart">My Cart(<span id="cart">0</span>)</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div class="mycont">
+        <h1 class="title">Welcome to <span class="shopone">Shopsc<span class="underline">ape</span>!</span> </h1>
+        <p class="para">Shop now on <span class="shopone">Shopscape</span> and receive upto 50% off on your first order!</p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div id="demo" class="carousel slide my-3" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!--Slideshow starts here -->
+            <div class="container carousel-inner no-padding">
+
+                <div class="carousel-item active">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <div class="ansh">
+                                    <span class="span">
+
+                                        <button class="btn btn-primary cart butt" id="pr1">Add to cart</button>
+                                    </span>
+                                    <button class="btn btn-primary cart butt" id="detail1">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <div class="ans">
+                                    <span class="span">
+
+                                        <button class="btn btn-primary cart butt" id="pr2">Add to cart</button>
+                                    </span>
+                                    <button class="btn btn-primary cart butt" id="detail2">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <div class="ans">
+                                    <span class="span">
+
+                                        <button class="btn btn-primary cart butt" id="pr3">Add to cart</button>
+                                    </span>
+                                    <button class="btn btn-primary cart butt" id="detail3">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr4">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail4">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span id="span"><button class="btn btn-primary cart butt" id="pr5">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail5">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr6">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail6">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr7">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail7">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr8">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail8">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr9">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail9">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr10">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail10">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr11">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail11">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Name</h5>
+                                <p class="card-text">Product description</p>
+                                <span class="span">
+
+                                    <button class="btn btn-primary cart butt" id="pr12">Add to cart</button>
+                                </span>
+                                <button class="btn btn-primary cart butt" id="detail12">View Details</button>
+                                <div class="ans"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- left and right controls for the slide -->
+        <a class="carousel-control-prev slide" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next slide" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+        <div class="cont">
+            <img src="https://www.forevernewclothing.com/media/wysiwyg/HomepageHero-1440x590-DT_25.jpg" class="img"
+                alt="">
+            <div class="contain">
+
+
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr13">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail13">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr14">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail14">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr15">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail15">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr16">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail16">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr17">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail17">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr18">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail18">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr19">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail19">View Details</button>
+                </div>
+                <div class="item"><img src="" alt="">
+                    <h5 class="card-title">Product Name</h5>
+                    <p class="card-text">Product Description</p>
+                    <button class="btn btn-primary cart butt" id="pr20">Add to cart</button>
+                    <button class="btn btn-primary cart butt" id="detail20">View Details</button>
+                </div>
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="cont">
+                <img src="https://lh3.googleusercontent.com/proxy/YzloyEncC4Acbqt3Eefuj5hMp-f6Cr7fYwahA44Gb2l-z7DgjVHSR22A2-bXpb-nQWM-F1KklXYF2TdP1D1Lrtgcqr71xabgsvajCk-rWM89l9uYKRI=s0-d"
+                    class="img" alt="">
+                <div class="contain">
+
+
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr13">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail13">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr14">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail14">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr15">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail15">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr16">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail16">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr17">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail17">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr18">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail18">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr19">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail19">View Details</button>
+                    </div>
+                    <div class="item"><img src="" alt="">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Product Description</p>
+                        <button class="btn btn-primary cart butt" id="pr20">Add to cart</button>
+                        <button class="btn btn-primary cart butt" id="detail20">View Details</button>
+                    </div>
+
+
+                </div>
+                <br><br><br>
+                <div class="cont">
+                    <img src="https://dealroup.com/wp-content/uploads/2020/05/Grocery-Offers.jpg" class="img" alt="">
+                    <div class="contain">
+
+
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr13">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail13">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr14">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail14">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr15">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail15">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr16">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail16">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr17">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail17">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr18">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail18">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr19">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail19">View Details</button>
+                        </div>
+                        <div class="item"><img src="" alt="">
+                            <h5 class="card-title">Product Name</h5>
+                            <p class="card-text">Product Description</p>
+                            <button class="btn btn-primary cart butt" id="pr20">Add to cart</button>
+                            <button class="btn btn-primary cart butt" id="detail20">View Details</button>
+                        </div>
+                    </div>
+                    <br><br>
+<footer>
+    <div class="center">
+        Copyright &copy; www.shopscape.com. All rights reserved|
+    </div>
+</footer>
+
+
+
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+<script>
+    //Find out cart items from localStorage
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    }
+    else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    }
+    //If the add to cart button is clicked, add the item
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = this.id.toString();
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        }
+        else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart))
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    });
+    //Add popover to cart
+    $('#popcart').popover();
+    document.getElementById("popcart").setAttribute('data-content', '<h5>My shopping Cart</h5>');
+    function updatePopover() {
+        console.log('We are inside updatePopover');
+    }
+</script>
+
+</html>
