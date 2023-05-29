@@ -9,211 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Home Page</title>
-    <style>
-        .navbar {
-            background-color: #000000;
-            /* border-radius: 30px; */
-            height: 75px;
-            width: 100%;
-            /* display: block; */
-
-        }
-
-        .navbar ul {
-            overflow: auto;
-
-        }
-
-        .navbar li {
-            float: left;
-            /* list-style: none; */
-            margin: -1px 20px;
-        }
-
-        .navbar li a {
-            padding: 3px 3px;
-            text-decoration: none;
-            color: white;
-            height: 2px;
-        }
-
-        .search {
-            float: right;
-            color: white;
-            padding: 2px 75px;
-            float: top;
-        }
-
-        .navbar input {
-            border: 2px solid black;
-        }
-
-        #search {
-            padding: 5px 25px;
-        }
-
-        #srh {
-            padding: 5px 15px;
-            color: black;
-            background-color: white;
-        }
-
-        .nav {
-            font-size: 20px;
-            /* display: block; */
-        }
-
-        .title {
-            margin-top: 40px;
-            padding-left: 800px;
-            /* text-decoration: underline; */
-            font-size: 50px;
-        }
-
-        .cart {
-            float: right;
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            margin: 0px 10px;
-        }
-
-        .navleft {
-            height: 40px;
-            margin: 0px 15px;
-            float: right;
-        }
-
-        .left {
-            float: top;
-            margin: 10px 0px;
-        }
-
-        .col-md-3 {
-            display: inline-block;
-            margin-left: -4px;
-        }
-
-        .carousel-indicators .active {
-            background-color: blue;
-        }
-
-        .col-md-3 img {
-            width: 100%;
-            height: auto;
-        }
-
-        body .carousel-indicator li {
-            background-color: blue;
-        }
-
-        body .carousel-indicators {
-            bottom: 0;
-        }
-
-        body .carousel-control-prev-icon,
-        body .carousel-control-next-icon {
-            background-color: blue;
-        }
-
-        body .no-padding {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .card {
-            width: 250px !important;
-            height: 200px !important;
-        }
-
-        .ansh {
-            display: flex;
-            flex-direction: row;
-            padding: 5px;
-
-        }
-
-        .butt {
-            font-size: 10px;
-        }
-
-        .title::before {
-            content: "";
-            background: url(https://www.moneycrashers.com/wp-content/uploads/2018/12/great-online-shopping-sites.jpg) no-repeat center center/cover;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0px;
-            left: 0px;
-            z-index: -1;
-            /* opacity: 0.5; */
-        }
-
-        .container {
-            padding-top: 130px;
-        }
-
-        .slide {
-            margin-top: 900px;
-        }
-
-        .para {
-            padding-left: 750px;
-            /* text-decoration: underline; */
-            font-size: 40px;
-            margin-top: 140px;
-        }
-
-        .img {
-            width: 199.5vh;
-            height: 400px;
-            margin-left: -200px;
-        }
-
-        .contain {
-            display: grid;
-            grid-template-columns: repeat(4, auto);
-            grid-gap: 2rem;
-        }
-
-        .item {
-            /* height: 100px;*/
-            /* width: 400px;  */
-            /* background-color: red; */
-            margin-top: 35px;
-            padding: 15px 5px;
-            border: 2px solid black;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            padding: 9px 20px;
-            width: 199.5vh;
-            margin-left: -200px;
-        }
-
-        .center {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <ul class="left">
-                <li class="nav"><a href="#">Home</a></li>
-                <li class="nav"><a href="#">About</a></li>
-                <li class="nav"><a href="#">Services</a></li>
-                <li class="nav"><a href="#">Contact us</a></li>
+                <li class="nav st"><a href="#">Home</a></li>
+                <li class="nav nd"><a href="#">About</a></li>
+                <li class="nav rd"><a href="#">Services</a></li>
+                <li class="nav th"><a href="#">Contact us</a></li>
                 <div class="search">
                     <input type="text" name="search" id="search" placeholder="Search">
-                    <button class="btn" type="button" id="srh">Search</button>
+                    <button class="btn search-btn" type="button" id="srh">Search</button>
                 </div>
             </ul>
             <ul class="navleft">
-                <li><a href="#" class="cart">Login/Register</a></li>
+                <li><a href="#" class="cart login">Login/Register</a></li>
                 <button type="button" class="btn btn-secondary" id="popcart" data-container="body" data-toggle="popover"
                     data-placement="bottom" data-html="true" data-content="hii everyone">
                     My Cart(<span id="cart">0</span>)
@@ -223,8 +36,10 @@
         </nav>
     </header>
     <br>
-    <h1 class="title">Welcome to Shopscape</h1>
-    <p class="para">Shop now on Shopscape and receive upto 50% off on your first order</p>
+    <div class="mycont">
+        <h1 class="title">Welcome to <span class="shopone">Shopsc<span class="underline">ape</span>!</span> </h1>
+        <p class="para">Shop now on <span class="shopone">Shopscape</span> and receive upto 50% off on your first order!</p>
+    </div>
     <br>
     <br>
     <div class="container">
