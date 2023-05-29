@@ -256,6 +256,7 @@ body .no-padding {
     margin-left: -200px;
 }
 
+
 .contain {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -275,14 +276,13 @@ footer {
     background-color: black;
     color: white;
     padding: 9px 20px;
-    width: 199.5vh;
+    width: 230vh;
     margin-left: -200px;
 }
 
 .center {
     text-align: center;
 }
-
 .navleft li a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2rem;
@@ -303,7 +303,31 @@ footer {
 .shopone {
     color: rgb(0, 0, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* .secondspan {
+    animation: jiggle 1s ease infinite;
+}
+
+
+@keyframes jiggle {
+    0% {
+        font-size: 2rem;
+    }
+    50% {
+        font-size: 2.2rem;
+    }
+    100% {
+        width: 2rem;
+    }
+} */
+
+.firstspan {
     transition: all 0.2s ease;
+}
+
+.firstspan:hover {
+    font-size: 5.2rem;
 }
 
 .underline {
