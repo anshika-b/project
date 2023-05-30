@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* Index */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    position: relative;
+}
+
+.form{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(110%,-50%);
+    background-color: white;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: rgb(14, 14, 124);
+    position: relative;
+    text-decoration: underline;
+}
+
+.input-field{
+    background-color: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field i{
+    margin-left: 15px;
+}
+
+/* form p{
+    text-align: left;
+    font-size: 13px;
+}
+
+form p a{
+    text-decoration: none;
+    color: #3c00a0;
+} */
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button{
+    flex-basis: 48%;
+    background-color: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.input{
+    height: 280px;
+}
+
+.btn button.disable{
+    background-color: #eaeaea;
+    color: #555;
+}
+
+#submit{
+    text-align: right;
+    cursor: pointer;
+    font-size: 15px;
+    color: #3c00a0;
+    text-decoration: underline;
+}
+
+/* Select Psychiatrists */
+
+.Psychaitrist{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding-top: 10px ;
+    color: white;
+}
+
+.cont{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    margin: 50px;
+
+}
+
+.button{
+    margin: 10px;
+    padding: 25px;
+    width: 660px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1 id="title">Sign Up</h1>
+            <form action="index1.html">
+                <div class="input">
+
+
+                    <div class="input-field" id="name">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <input id ="submit" type="submit" value = "Submit Now">
+                    </div>
+                    <!-- <p>Forgot password <a href="#">Click Here</a></p> -->
+                </div>
+                <div class="btn">
+                    <button type="button" id="signup">Sign Up</button>
+                    <button type="button" class="disable" id="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signup = document.getElementById("signup");
+        let login = document.getElementById("login");
+        let name = document.getElementById("name");
+        let title = document.getElementById("title");
+
+        login.onclick = function(){
+            name.style.maxHeight ="0";
+            title.innerHTML = "Login";
+            signup.classList.add("disable");
+            login.classList.remove("disable");
+        }
+
+        signup.onclick = function(){
+            name.style.maxHeight ="50px";
+            title.innerHTML = "Sign Up";
+            signup.classList.remove("disable");
+            login.classList.add("disable");
+        }
+    </script>
+</body>
+</html>
