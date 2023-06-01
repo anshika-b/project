@@ -412,3 +412,12 @@ footer {
 .navleft {
     list-style: none;
 }
+
+.product{
+    color: white;
+    text-decoration: none;
+}
+.product:hover{
+    color: white;
+    text-decoration: none;
+}

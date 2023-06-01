@@ -4,206 +4,329 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Sign in/up Form | FantacyDesigns</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <style>
-    /* Index */
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-size: cover;
-    position: relative;
+body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
 }
 
-.form{
-    width: 90%;
-    max-width: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    transform: translate(110%,-50%);
-    background-color: white;
-    padding: 50px 60px 70px;
-    text-align: center;
+h1 {
+	font-weight: bold;
+	margin: 0;
 }
 
-.form h1{
-    font-size: 30px;
-    margin-bottom: 60px;
-    color: rgb(14, 14, 124);
-    position: relative;
-    text-decoration: underline;
+h2 {
+	text-align: center;
+
 }
 
-.input-field{
-    background-color: #eaeaea;
-    margin: 15px 0;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    max-height: 65px;
-    transition: max-height 0.5s;
-    overflow: hidden;
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
 }
 
-input{
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 18px 15px;
+span {
+	font-size: 12px;
+margin-bottom:20px;
 }
 
-.input-field i{
-    margin-left: 15px;
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+} 
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+cursor:pointer;
 }
 
-/* form p{
-    text-align: left;
-    font-size: 13px;
+button:active {
+	transform: scale(0.95);
 }
 
-form p a{
-    text-decoration: none;
-    color: #3c00a0;
-} */
-
-.btn{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+button:focus {
+	outline: none;
 }
 
-.btn button{
-    flex-basis: 48%;
-    background-color: #3c00a0;
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+outline:none;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+
+}
+
+footer {
+    background-color: #222;
     color: #fff;
-    height: 40px;
-    border-radius: 20px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    transition: background 1s;
-}
-
-.input{
-    height: 280px;
-}
-
-.btn button.disable{
-    background-color: #eaeaea;
-    color: #555;
-}
-
-#submit{
-    text-align: right;
-    cursor: pointer;
-    font-size: 15px;
-    color: #3c00a0;
-    text-decoration: underline;
-}
-
-/* Select Psychiatrists */
-
-.Psychaitrist{
-    display: block;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
     text-align: center;
-    font-size: 40px;
-    height: 80px;
-    border: 3px solid black;
-    border-radius: 50px;
-    background-color: black;
-    padding-top: 10px ;
-    color: white;
+    z-index: 999;
 }
 
-.cont{
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    margin: 50px;
-
+footer p {
+    margin: 10px 0;
 }
 
-.button{
-    margin: 10px;
-    padding: 25px;
-    width: 660px;
-    cursor: pointer;
-    font-size: 20px;
+footer i {
+    color: red;
 }
 
-button a{
+footer a {
+    color: #3c97bf;
     text-decoration: none;
-    color: black;
+}
+.but{
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
 }
 </style>
 <body>
-    <div class="container">
-        <div class="form">
-            <h1 id="title">Sign Up</h1>
-            <form action="index1.html">
-                <div class="input">
+<!-- <h2> Sign in/up Form | Coding Challenge</h2> -->
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			
+			<!-- <span>or use your email for registration</span> -->
+			<input type="text" placeholder="Name" />
+			<input type="phone" placeholder="Mobile No." />
+			<input type="password" placeholder="Password" />
+			<input type="password" placeholder="Confirm Password" />
+			<button><a href= "index1.html" class="but">Sign Up</button></a>
+            <p>Already have an account?<a href="signin.html">Sign In</a></p>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			
+			<!-- <span>or use your account</span> -->
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<input type="password" placeholder="Confirm Password" />
+			<button><a href ="index1.html" class="but">Sign Up</button></a>
+			<p>Already have an account?<a href="signin.html">Sign In</a></p>
+			<!-- <button>Sign In</button> -->
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h2>Sign Up using Email</h2>
+				
+				<button class="ghost" id="signIn">Sign Up</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h2>Sign Up using Mobile Number</h2>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
 
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-                    <div class="input-field" id="name">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name">
-                    </div>
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
 
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
-                    </div>
-
-
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password">
-                    </div>
-                    <div>
-                        <input id ="submit" type="submit" value = "Submit Now">
-                    </div>
-                    <!-- <p>Forgot password <a href="#">Click Here</a></p> -->
-                </div>
-                <div class="btn">
-                    <button type="button" id="signup">Sign Up</button>
-                    <button type="button" class="disable" id="login">Login</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        let signup = document.getElementById("signup");
-        let login = document.getElementById("login");
-        let name = document.getElementById("name");
-        let title = document.getElementById("title");
-
-        login.onclick = function(){
-            name.style.maxHeight ="0";
-            title.innerHTML = "Login";
-            signup.classList.add("disable");
-            login.classList.remove("disable");
-        }
-
-        signup.onclick = function(){
-            name.style.maxHeight ="50px";
-            title.innerHTML = "Sign Up";
-            signup.classList.remove("disable");
-            login.classList.add("disable");
-        }
-    </script>
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
 </body>
 </html>
